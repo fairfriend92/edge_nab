@@ -1,3 +1,0 @@
-/content/drive/MyDrive/Progetti/edge_nab/build/CMakeFiles/edge_nab.dir
-/content/drive/MyDrive/Progetti/edge_nab/build/CMakeFiles/edit_cache.dir
-/content/drive/MyDrive/Progetti/edge_nab/build/CMakeFiles/rebuild_cache.dir
