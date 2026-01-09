@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/edge_nab.dir/src/main.cpp.o CMakeFiles/edge_nab.dir/src/nab_loader.cpp.o CMakeFiles/edge_nab.dir/src/event_encoder.cpp.o CMakeFiles/edge_nab.dir/src/temporal_operator.cpp.o CMakeFiles/edge_nab.dir/src/csv_writer.cpp.o -o edge_nab
