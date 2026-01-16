@@ -6,6 +6,10 @@
 #include "csv_writer.h"
 
 constexpr int N_RUNS = 1000;
+constexpr double ALPHA = 0.95;
+constexpr double BETA = 0.99;
+constexpr double GAMMA = 0.01;
+constexpr double K = 2;
 
 int main() {
     Timer timer;
@@ -20,7 +24,7 @@ int main() {
 
     timer.tic();
     for (int i = 0; i < N_RUNS; ++i) {
-        run_temporal_operator(events, 0.95);
+        run_temporal_operator(events, ALPHA, BETA, GAMMA, K);
     }
     double t_op = timer.toc_ms() / N_RUNS;
 
@@ -29,8 +33,13 @@ int main() {
     std::cout << "Op:     " << t_op     << " ms\n";
     std::cout << "Total samples: " << ts.values.size() << "\n";
 
-    auto scores = run_temporal_operator(events, 0.95);
-    write_csv("../outputs/scores.csv", scores);    
+    auto out = run_temporal_operator(events, ALPHA, BETA, GAMMA, K);
+    write_csv(
+      "../outputs/scores.csv", 
+      out.state,
+      out.baseline,
+      out.score,
+      out.anomaly);    
 
     return 0;
 }
