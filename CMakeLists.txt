@@ -42,6 +42,8 @@ set(SOURCES
     src/event_encoder.cpp
     src/temporal_operator.cpp
     src/csv_writer.cpp
+    src/metrics.cpp
+    src/grid_search.cpp
 )
 
 # ------------------------------------------------------------
